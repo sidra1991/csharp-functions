@@ -123,9 +123,37 @@ Console.WriteLine(SommaElementiArray(ElevaArrayAlQuadrato(array)));
 
 
 //---------------------...................------------------------
-//    aggiunte da me
+//    fattoriale
+
+// con ciclo 
+
+Console.WriteLine("inserire il numero di cui vuoi conoscere il fattoriale");
+ int numero = Convert.ToInt32( Console.ReadLine()) ;
+void fattorialeConCiclo(int numero)
+{
+    Console.WriteLine( "fattoriale con ciclo" );
+    int[] arrayFattoriale = new int[numero -2];
+    for (int i = 0; numero - i > 0 ; i++)
+    {
+        if (i == 0)
+        {
+            arrayFattoriale[i] = numero * (numero - 1);
+        }else if ( numero - (i+1) > 1 )
+        {
+            arrayFattoriale[i] = arrayFattoriale[i - 1] * (numero - (i + 1));
+        } else
+        {
+            string Stamp = Convert.ToString(arrayFattoriale[arrayFattoriale.Length - 1]);
+            Console.WriteLine("il risultato è " + Stamp);
+        }
+    }
+}
 
 
+
+
+
+fattorialeConCiclo(numero);
 
 
 
